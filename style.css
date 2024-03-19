@@ -1,0 +1,169 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    max-width: 400px;
+    width: 100%;
+    height: 500px;
+    margin: 0 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #e1bee7, #9c27b0);
+    transition: all 0.3s ease;
+}
+
+.player:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    background: linear-gradient(to bottom right, #e1bee7, #9c27b0);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.logo i {
+    font-size: 150px;
+    color: #fff;
+}
+
+#musicName {
+    white-space: nowrap; 
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 24px;
+    margin-top: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.controls button {
+    border: none;
+    background-color: #ffcc80; /* Cor modificada para combinar com o gradiente */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.controls i {
+    font-size: 40px;
+    border-radius: 50%;
+    color: #fff;
+}
+
+.controls i:hover {
+    background: linear-gradient(to right, #ff5722, #ffcc80);
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.time span {
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer {
+    width: 100%;
+}
+
+.progress-bar {
+    height: 8px;
+    background: linear-gradient(to right, #9c27b0, #673ab7);
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.progress {
+    height: 8px;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+/* Adicione estas regras para o controle de volume */
+
+.volume-control {
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 10px;
+}
+
+.volume-control .volume-progress {
+    height: 100%;
+    background-color: #4caf50; /* Cor da barra de volume */
+    border-radius: 5px;
+    width: 50%; /* Defina o volume inicial aqui (50% como exemplo) */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.2s ease;
+}
+
+.volume-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.volume-bar input[type="range"] {
+    width: 80%;
+    height: 10px; /* Altura da barra de volume */
+    -webkit-appearance: none;
+    background-color: #fff;
+    border-radius: 10px;
+    outline: none; /* Remover o contorno padrão do input */
+}
+
+.volume-bar input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px; /* Altura da faixa da barra de volume */
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.volume-bar input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; /* Largura da bola (thumb) da barra de volume */
+    height: 20px; /* Altura da bola (thumb) da barra de volume */
+    background-color: #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para efeito visual */
+    margin-top: -7px; /* Ajuste para centralizar verticalmente */
+}
